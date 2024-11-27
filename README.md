@@ -1,35 +1,98 @@
-# Password-Generator
+# Password Generator
 
-This project is a Java Console Application to generate random passwords and perform password strength checks.
+A Java Console Application that generates secure random passwords and checks password strength.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation and Usage](#installation-and-usage)
+    - [Prerequisites](#prerequisites)
+    - [Running the Application](#running-the-application)
+- [Usage](#usage)
+    - [Generating a Password](#generating-a-password)
+    - [Checking Password Strength](#checking-password-strength)
+- [Security Tips](#security-tips)
 
 ## Introduction
 
-I decided to build this project during the Winter Break of my second year after taking the Object-Oriented Effective Java Programming course. I wanted to build something interesting with Java to practice and see what I could do on my own. However, I still wasn't sure what I wanted to do. Then one night, while explaining to my father the importance of having a strong password for his social media accounts, I got the idea of creating a random password generator. A week later, it was done. 
+The Password Generator is a Java-based console application designed to help users create secure passwords and assess the strength of existing ones. This tool promotes better security practices by ensuring passwords are strong and comply with recommended guidelines.
 
-While working on it, I decided to include a password strength checker feature that checks the overall strength of the entered password. I was pretty happy with how it turned out, but I realized that it was not very straightforward to use for someone who does not know how it is supposed to work. So, I decided to create a GUI for the application for the next step, which is available in the Password-Services repository.
+## Features
 
-## Functionalities
+- **Password Generation**: Create random passwords based on user-defined criteria, including:
+    - Use of uppercase letters
+    - Use of lowercase letters
+    - Inclusion of numbers
+    - Inclusion of symbols
+    - Customizable password length
+- **Password Strength Checker**: Evaluate the strength of any given password against key security criteria.
 
-### 1. Generating a Password:
+## Installation and Usage
 
-- The user answers with "Yes" or "No" to questions about using uppercase letters, lowercase letters, numbers, or symbols.
-- The user then enters the desired length of the password.
-- A password alphabet is generated based on the user's answers, which is a string containing the chosen characters.
-- Random characters from the password alphabet are selected and combined to form a completely random string according to the user's preferences.
-- The randomly generated password is then displayed on the console.
+### Prerequisites
 
-### 2. Checking a Password's Strength:
+- Java Development Kit (JDK) 8 or higher installed on your system
+- Command-line interface access (Terminal, Command Prompt, etc.)
 
-The strength check is based on the following criteria:
-- The password uses uppercase letters.
-- The password uses lowercase letters.
-- The password uses numbers.
-- The password uses symbols.
-- The length of the password is 8 or more (8 is often the minimum required length for a decent password).
-- The length of the password is 16 or more (16 is considered to be the minimum length for a good password).
+### Running the Application
 
-These criteria are used to calculate a score for the password, which determines the message displayed to the user indicating the strength of the password (weak/medium/good/great).
+#### Windows
 
-### 3. Displaying Useful Information:
+1. Open Command Prompt.
+2. Navigate to the project directory:
+     ```cmd
+     cd C:\path\to\password-generator
+     ```
+3. Compile the Java files:
+     ```cmd
+     javac PasswordGenerator.java
+     ```
+4. Run the application:
+     ```cmd
+     java PasswordGenerator
+     ```
 
-This is a minor feature that displays information for the user on the console about password security, such as avoiding using the same password twice, avoiding character repetition, keyboard patterns, dictionary words, letter or number sequences, etc.
+#### macOS and Linux
+
+1. Open Terminal.
+2. Navigate to the project directory:
+     ```bash
+     cd /path/to/password-generator
+     ```
+3. Compile the Java files:
+     ```bash
+     javac PasswordGenerator.java
+     ```
+4. Run the application:
+     ```bash
+     java PasswordGenerator
+     ```
+
+## Usage
+
+### Generating a Password
+
+- The application will prompt you to include various character types. Answer with "Yes" or "No":
+    - Use uppercase letters?
+    - Use lowercase letters?
+    - Use numbers?
+    - Use symbols?
+- Enter the desired password length when prompted.
+- The generated password will be displayed on the console.
+
+### Checking Password Strength
+
+- When prompted, enter the password you wish to evaluate.
+- The application will assess the password based on:
+    - Use of uppercase and lowercase letters
+    - Inclusion of numbers and symbols
+    - Password length
+- A strength score and feedback will be provided.
+
+## Security Tips
+
+- Avoid reusing passwords across different accounts.
+- Do not use easily guessable information like birthdays or common words.
+- Regularly update your passwords to reduce the risk of compromise.
+- Consider using a password manager to store and manage your passwords securely.
